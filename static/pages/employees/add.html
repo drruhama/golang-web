@@ -1,0 +1,33 @@
+{{template "layout" .}}
+
+{{define "main"}}
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <h1>Add new Employee</h1>
+        <hr class="my-2">
+        <!-- 
+            Pada form itu methodnya ada 2, yaitu POST dan GET.
+            Pada form juga ada property namanya `action`, yang berfungsi untuk
+            menentukan path jika tombol submit di tekan, maka datanya akan dikirim ke action
+            tersebut. Namun jika kita tidak mendefinisikannya, maka secara default dia akan mengirimkamnya ke
+            url sekarang. Oleh sebab itu kita tidak memberikannya sebuah nilai, dan dia akan mereturn ke endpoint yg sama namun dengan method yang berbeda
+         -->
+        <form method="POST">
+            <label for="">Name</label>
+            <!-- sesuakan `name`dengan apa yang telah dijelaskan -->
+            <input type="text" name="name" class="form-control mb-3">
+
+            <label for="">NIP</label>
+            <!-- sesuakan `name`dengan apa yang telah dijelaskan -->
+            <input type="text" name="nip" class="form-control mb-3">
+
+            <label for="">Address</label>
+            <!-- sesuakan `name`dengan apa yang telah dijelaskan -->
+            <input type="text" name="address" class="form-control mb-3">
+
+            <button class="btn btn-primary" type="submit">Tambah Pegawai Baru</button>
+        </form>
+    </div>
+</div>
+
+{{end}}
